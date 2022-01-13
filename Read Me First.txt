@@ -1,0 +1,10 @@
+Name: Tanishka Gupta
+Intern ID: 1950
+
+Tech Used in development of this project are as follows:-
+Front-End: HTML & CSS
+Back-End: Django
+Database: SQLite
+Text-Editor: Atom
+
+

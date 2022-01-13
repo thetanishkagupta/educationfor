@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Course Shop App | Welcome</title>
+    <div class="imgcontainer">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+      <script src="jquery/jquery.js"></script>
+<script type="text/javascript" src='js/bootstrap.min.js'></script>
+<link rel="stylesheet" href="css/bootstrap.css" />
+
+      <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet"  type="text/css" href='{% static 'style3.css' %}' >
+
+
+</head>
+	<script src="https://kit.fontawesome.com/7549cc4c6e.js" crossorigin="anonymous"></script>
+  <style>
+
+  .cards
+  {
+    width:750px;
+  }
+  .card_btn
+  {
+margin-top: -30px;
+    width:110px;
+    height:31px;
+  }
+  #cor
+  {
+    margin-top:-12px;
+  }
+  #cor1
+  {
+    margin-top: -8px;
+  }#cor2
+  {
+    margin-top: -14px;
+  }#cor3
+  {
+    margin-top: -4px;
+  }
+#tan
+{
+  width:400px;
+  height: 350px;
+}
+#tan1
+{
+  width:400px;
+  height: 350px;
+}
+#tan2
+{
+  width:400px;
+  height: 350px;
+}
+#tan3
+{
+  width:400px;
+  height: 350px;
+}
+.gup
+{
+text-decoration: none;
+color:white;
+font-size: 25px;
+margin-top: 10px;
+padding-right: 0;
+  padding-left: 0;
+  text-align: right;
+  margin-right: 10px;
+}
+  </style>
+<body>
+
+    <ul>
+        <li><a class="active" href="/welcome">Home</a></li>
+        <li><a  href="/profile">My Profile</a></li>
+        <li><a href="/course">My Courses</a></li>
+        <li><a href="/handelLogout">LogOut</a></li>
+
+<p class="gup">Hi {{request.user}}</p>
+
+
+
+    </ul>
+
+    {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-dismissible alert-success">
+
+            <button type="button" class="close" data-dismiss="alert">
+            ×
+            </button>
+            <strong>Message : </strong> {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+    <div class="penguin">
+  <div class="penguin-bottom">
+    <div class="right-hand"></div>
+    <div class="left-hand"></div>
+    <div class="right-feet"></div>
+    <div class="left-feet"></div>
+  </div>
+  <div class="penguin-top">
+    <div class="right-cheek"></div>
+    <div class="left-cheek"></div>
+    <div class="belly"></div>
+    <div class="right-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="left-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="blush-right"></div>
+    <div class="blush-left"></div>
+    <div class="beak-top"></div>
+    <div class="beak-bottom"></div>
+  </div>
+</div>
+<div style="margin-top:165px;">
+        <h1 style="text-align: center;"><strong>Courses Offered</strong></h1>
+
+    </div>
+
+    <section class="cards">
+
+  <div class="card">
+    <div class="card__image a">
+    <img src='{% static "images/pic6.png" %}'>
+    </div>
+    <div class="card__content">
+      <div class="card__title" style="font-size:25px;">Best place to learn HTML!</div>
+      <div class="card__text"style="font-size:18px;">HTML is the standard markup language for Web pages.With HTML you can create your own Website.HTML is easy to learn - You will enjoy it!</div>
+      <details>
+      <summary class="button1">Course Detail</summary>
+         <div id="tan">
+            <h2>Why Learn HTML?</h2>
+            <p2>HTML is the foundation of all web pages. Without HTML, you wouldn’t be able to organize text or add images or videos to your web pages. <br>HTML is the beginning of everything you need to know to create engaging web pages!<br><br>Duration: 1 month <br>Time: 1 hour/day <br>Requirement: There's no pre-requisite at all, besides a general familiarity with the way the web works. You can and should learn CSS at the same time as you learn HTML.</p2>
+          </div>
+        </details>
+
+    <a href="/buy" class="card_btn "id="cor">Buy Course</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image b">
+    <img src='{% static "images/pic7.png" %}'>
+    </div>
+    <div class="card__content">
+      <div class="card__title"style="font-size:25px;">Best place to learn CSS!</div>
+      <div class="card__text"style="font-size:17px;">CSS is the language we use to style an HTML document.CSS describes how HTML elements should be displayed.This tutorial will teach you CSS from basic to advanced.</div>
+      <details>
+      <summary class="button1">Course Detail</summary>
+         <div id="tan1">
+            <h2>Why Learn CSS?</h2>
+            <p2>This course shows you how to design web pages and create CSS classes from a beginner's level to a more intermediate level. It starts off with basic HTML declarations, properties, values and how to include a CSS style sheet with your HTML code. <br><br>Duration: 1 month <br>Time: 1 hour/day <br>Requirement: 1.Basic familiarity with using computers, and using the Web passively (i.e. looking at it, consuming the content.)<br>2.Basic familiarity with HTML</p2>
+          </div>
+        </details>
+      <a href="/buy" class="card_btn"id="cor1">Buy Course</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image c">
+    <img src='{% static "images/pic9.png" %}'>
+    </div>
+    <div class="card__content">
+      <div class="card__title"style="font-size:25px;">Best place to learn JS!</div>
+      <div class="card__text"style="font-size:17px;">JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.JavaScript is easy to learn.
+    </div>
+      <details>
+      <summary class="button1">Course Detail</summary>
+          <div id="tan2">
+            <h2>Why Learn JS?</h2>
+            <p2>This course shows you how to design web pages and create CSS classes from a beginner's level to a more intermediate level. It starts off with basic HTML declarations, properties, values and how to include a CSS style sheet with your HTML code. <br><br>Duration: 1 month <br>Time: 1 hour/day <br>Requirement:1. No coding experience is necessary to take this course! I take you from beginner to expert!<br>
+            2.A Basic understanding of HTML and CSS is a plus. </p2>
+          </div>
+        </details>
+      <a href="/buy" class="card_btn"id="cor2">Buy Course</a>
+  </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image d">
+    <img src='{% static "images/pic10.png" %}'>
+    </div>
+    <div class="card__content">
+      <div class="card__title"style="font-size:25px;">Best place to learn Django!</div>
+      <div class="card__text"style="font-size:17px;">Django is a high-level Python web framework that enables rapid development of secure and maintainable websites.</div>
+      <details>
+      <summary class="button1">Course Detail</summary>
+         <div id="tan3">
+            <h2>Why Learn Django?</h2>
+            <p2>Django is a complete high-level web framework that encourages rapid development and clean, pragmatic design. Our Django course develops your team’s skill set in deep dive knowledge of Installation & Configuration of Django Components!<br><br>Duration: 2 month <br>Time: 1 hour/day <br>Requirement:1.Sound understanding of the Python.<br>2. Basic understanding of web technologies.<br>3.Basic understanding of OOP and relational database concepts.</p2>
+          </div>
+        </details>
+      <a href="/buy" class="card_btn"id="cor3">Buy Course</a>
+    </div>
+  </div>
+</section>
+<div id="footer" class="footer">
+        <p style="color: white;"> © Copyright 2021 , All rights reserved.</p>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

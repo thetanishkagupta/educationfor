@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Course Shop App | My Profile</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Marck+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rakkas">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css">
+    <link rel="stylesheet"  type="text/css" href='{% static 'style4.css' %}' >
+    <link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
+</head>
+
+<style>
+#tan
+{
+  margin-left: 0;
+  margin-top: 0;
+}
+.gup
+{
+text-decoration: none;
+color:white;
+font-size: 20px;
+margin-top: 13px;
+padding-right: 0;
+  padding-left: 0;
+  text-align: right;
+  margin-right: 10px;
+}
+</style>
+<body >
+  <ul id="tan">
+      <li><a class="active" href="/welcome">Home</a></li>
+      <li><a  href="/profile">My Profile</a></li>
+      <li><a href="/course">My Courses</a></li>
+      <li><a href="/handelLogout">LogOut</a></li>
+
+<p class="gup">Hi {{request.user}}</p>
+
+
+
+  </ul>
+    <div class="container">
+        <div class="logo"></div>
+        <h1> My Profile</h1>
+
+        <p class="bio">
+            Name: &nbsp{{request.user.first_name}} {{request.user.last_name}}<br>
+            Email: &nbsp{{request.user.email}}<br>
+            Phone: &nbsp{{request.user.extendeduser.phone_num}}<br>
+            Address: &nbsp{{request.user.extendeduser.addre}}<br>
+            DOB:&nbsp{{request.user.extendeduser.dob}}
+        </p>
+    </div>
+<div id="footer" class="footer">
+        <p style="color: white;"> © Copyright 2021 , All rights reserved.</p>
+
+    </div>
+</body>
+</html>

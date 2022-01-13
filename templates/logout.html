@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Shop App | LogOut</title>
+  <link rel="stylesheet"  type="text/css" href='{% static 'style7.css' %}' >
+    </head>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+
+<body>
+    <div class="background"></div>
+    <div class="card-wrapper">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-content__title">You are <span class="text-gradient"> Logged Out </span> Successfully!! </div>
+                <div class="card-content__text">Dear User! Do you want to visit us again? </div>
+                <div class="card-content__btn-wrapper">
+                    <button class="card-content__btn card-content__btn-transparent hvr-float-shadow" onclick="window.location.replace('/')" value="Home">HOME
+                    </button>
+                    <button class="card-content__btn hvr-float-shadow" onclick="window.location.replace('/login')" value="login">LOG IN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

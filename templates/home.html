@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Course Shop App | Home</title>
+    <link rel="stylesheet" type="text/css" href='{% static 'style.css' %}'>
+    <style>
+    .card_btn
+    {
+  margin-top: -1px;
+      width:120px;
+      height:31px;
+    }
+    #cor
+    {
+      margin-top: -35px;
+    }
+    #cor1
+    {
+      margin-top: -25px;
+    }#cor2
+    {
+      margin-top: -15px;
+    }#cor3
+    {
+      margin-top: -10px;
+    }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="main">
+            <div class="logo">
+                <img src='{% static "images/abc.png" %}'>
+            </div>
+            <ul>
+                <li class="active"><a href="/">HOME</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">SignUp</a></li>
+           </ul>
+        </div>
+        <div class="title">
+            <h1 style="margin-left:-90px;">Course Shop App</h1>
+            <h2 style="margin-left:-90px;">Learn Online & Stay Safe</h2>
+        </div>
+
+
+    </header>
+    <div class="title1">
+        <h1 style="text-align: center;margin-top:10px;font-size:35px;">Courses Offered</h1>
+
+    </div>
+
+    <section class="cards">
+
+  <div class="card">
+    <div class="card__image a">
+      <img src='{% static "images/pic6.png" %}'>
+    </div>
+    <div class="card__content">
+      <div class="card__title">Best place to learn HTML!</div>
+      <div class="card__text">HTML is the standard markup language for Web pages.With HTML you can create your own Website.HTML is easy to learn - You will enjoy it!</div>
+      <details>
+      <summary class="button1">Course Detail</summary><br>
+         <div>
+            <h2>Why Learn HTML?</h2>
+            <p2>HTML is the foundation of all web pages. Without HTML, you wouldn’t be able to organize text or add images or videos to your web pages. <br>HTML is the beginning of everything you need to know to create engaging web pages!<br><br>Duration: 1 month <br>Time: 1 hour/day <br>Requirement: There's no pre-requisite at all, besides a general familiarity with the way the web works. You can and should learn CSS at the same time as you learn HTML.</p2>
+          </div>
+        </details>
+<br>      <a href="/login" class="card_btn" id="cor">Buy Course</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image b">
+      <img src='{% static "images/pic7.png" %}'>
+    </div>
+    <div class="card__content">
+      <div class="card__title">Best place to learn CSS!</div>
+      <div class="card__text">CSS is the language we use to style an HTML document.CSS describes how HTML elements should be displayed.This tutorial will teach you CSS from basic to advanced.</div>
+      <details>
+      <summary class="button1">Course Detail</summary><br>
+         <div>
+            <h2>Why Learn CSS?</h2>
+            <p2>This course shows you how to design web pages and create CSS classes from a beginner's level to a more intermediate level. It starts off with basic HTML declarations, properties, values and how to include a CSS style sheet with your HTML code. <br><br>Duration: 1 month <br>Time: 1 hour/day <br>Requirement: 1.Basic familiarity with using computers, and using the Web passively (i.e. looking at it, consuming the content.)<br>2.Basic familiarity with HTML</p2>
+          </div>
+        </details>
+    <br>  <a href="/login"class="card_btn" id="cor1">Buy Course</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image c">
+      <img src='{% static "images/pic9.png" %}'>
+    </div>
+    <div class="card__content">
+      <div class="card__title">Best place to learn JS!</div>
+      <div class="card__text">JavaScript is the world's most popular programming language.JavaScript is the programming language of the Web.JavaScript is easy to learn.
+    </div>
+    <details>
+    <summary class="button1">Course Detail</summary>
+       <div>
+          <h2>Why Learn JS?</h2>
+          <p2>This course shows you how to design web pages and create CSS classes from a beginner's level to a more intermediate level. It starts off with basic HTML declarations, properties, values and how to include a CSS style sheet with your HTML code. <br><br>Duration: 1 month <br>Time: 1 hour/day <br>Requirement:1. No coding experience is necessary to take this course! I take you from beginner to expert!<br>
+          2.A basic understanding of HTML and CSS is a plus. </p2>
+        </div>
+      </details>
+    <a href="/login" class="card_btn" id="cor2">Buy Course</a>
+  </div>
+  </div>
+
+  <div class="card">
+    <div class="card__image d">
+      <img src='{% static "images/pic10.png" %}'>
+    </div>
+    <div class="card__content">
+      <div class="card__title">Best place to learn Django!</div>
+      <div class="card__text">Django is a high-level Python web framework that enables rapid development of secure and maintainable websites.</div>
+      <details>
+      <summary class="button1">Course Detail</summary>
+         <div>
+            <h2>Why Learn Django?</h2>
+            <p2>Django is a complete high-level web framework that encourages rapid development and clean, pragmatic design. Our Django course develops your team’s skill set in deep dive knowledge of Installation & Configuration of Django Components!<br><br>Duration: 2 month <br>Time: 1 hour/day <br>Requirement:1.Sound understanding of the Python.<br>2. Basic understanding of web technologies.<br>3.Basic understanding of OOP and relational database concepts.</p2>
+          </div>
+        </details>
+      <a href="/login"class="card_btn" id="cor3">Buy Course</a>
+    </div>
+  </div>
+</section>
+<div id="footer" class="footer">
+        <p style="color: white;"> © Copyright 2021 , All rights reserved.</p>
+
+    </div>
+</body>
+</html>

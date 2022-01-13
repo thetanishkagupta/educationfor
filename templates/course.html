@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Shop App | My Courses</title>
+    <link rel="stylesheet"  type="text/css" href='{% static 'style5.css' %}' >
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    </head>
+		<script src="https://kit.fontawesome.com/7549cc4c6e.js" crossorigin="anonymous"></script>
+		<style>
+
+		.footer1
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+      background-color:#26272b;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+		#head
+{
+background-color: gray;
+}
+		#comp
+{
+  margin-top:40px;
+  margin-left:150px;
+margin-right:150px;
+margin-bottom:80px;
+}
+#tan
+{
+  margin-bottom:180px;
+  padding-bottom:300px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 20px;
+}
+.gup
+{
+text-decoration: none;
+color:white;
+font-size: 25px;
+margin-top: 10px;
+padding-right: 0;
+  padding-left: 0;
+  text-align: right;
+  margin-right: 10px;
+}
+		</style>
+<body>
+	<ul class="ui">
+			<li><a class="active" href="/welcome">Home</a></li>
+			<li><a  href="/profile">My Profile</a></li>
+			<li><a href="/course">My Courses</a></li>
+			<li><a href="/handelLogout">LogOut</a></li>
+
+<p class="gup">Hi {{request.user}}</p>
+	</ul>
+  <br>  <div class="title">
+        <h1 style="text-align: center; font-size: 48px;text-shadow: 4px 4px 4px #aaa;">My Courses</h1>
+    </div>
+		<div id="tan">
+{% for ord in order1 %}
+<div class="card" id="comp">
+<div>
+  <div class="card-header" id="head">
+    <strong>Course: {{ord.course}}</strong>
+  </div>
+  <div class="card-body">
+    <ul style="  list-style-type: none;background-color:white">
+    <li><strong>Name:</strong>&nbsp{{ ord.name}}</li><br>
+    <li><strong>Email address:</strong>&nbsp {{ ord.phone}}</li><br>
+    <li><strong>Phone Number:</strong>&nbsp {{ ord.email}}</li><br>
+    <li><strong>Address:</strong>&nbsp {{ ord.address}}</li><br>
+    <li><strong>Date of Purchase:</strong>&nbsp {{ ord.timeStamp}}</li>
+    </ul>
+    </div>
+</div>
+<br>
+</div>
+
+{% endfor %}
+<div id="footer" class="footer1">
+        <p style="color: white;"> © Copyright 2021 , All rights reserved.</p>
+
+    </div>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
